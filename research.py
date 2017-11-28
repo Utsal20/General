@@ -1,4 +1,5 @@
 import tensorflow as tf
+from logistic_map_inputs import get_input
 
 # Parameters
 learning_rate = 0.001
