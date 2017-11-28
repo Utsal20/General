@@ -28,8 +28,8 @@ biases = {
 
 # Tentative model
 # 2 hidden layers and 1 output layer
-l1 = tf.add(tf.matmul(x, weights['h1']), biases['b1'])
-l2 = tf.add(tf.matmul(l1, weights['h2']), biases['b2'])
+l1 = tf.sigmoid(tf.add(tf.matmul(x, weights['h1']), biases['b1']))
+l2 = tf.sigmoid(tf.add(tf.matmul(l1, weights['h2']), biases['b2']))
 out_layer = tf.add(tf.matmul(l2, weights['out']), biases['out'])
 
 # Define loss
