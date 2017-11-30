@@ -4,7 +4,10 @@ from logistic_map_inputs import get_input
 # Parameters
 learning_rate = 0.001
 epochs = 15
-n_sequences = 100
+n_sequences = 10 #10 only for the sake of debugging purposes
+
+# Get the input sequence and associated 'r'
+features, labels = get_input(n_sequences)
 
 # Network parameters
 n_input = 4
@@ -29,8 +32,8 @@ biases = {
 
 # Tentative model
 # 2 hidden layers and 1 output layer
-l1 = tf.sigmoid(tf.add(tf.matmul(x, weights['h1']), biases['b1']))
-l2 = tf.sigmoid(tf.add(tf.matmul(l1, weights['h2']), biases['b2']))
+l1 = tf.nn.relu(tf.add(tf.matmul(x, weights['h1']), biases['b1']))
+l2 = tf.nn.relu(tf.add(tf.matmul(l1, weights['h2']), biases['b2']))
 out_layer = tf.add(tf.matmul(l2, weights['out']), biases['out'])
 
 # Define loss
@@ -45,4 +48,17 @@ init = tf.global_variables_initializer()
 
 with tf.Session() as sess:
     sess.run(init)
+    #Training
+    for epoch in range(epochs):
+        avg_cost = 0.
+        for i in range(n_sequences):
+            # Backpropagation and cost op
+            a, c = sess.run([train_op, loss_op], feed_dict={X: features[i]
+                                                            Y: labels[i]})
+            # Average loss for each
+            avg_cost += c/n_sequences
+        print("Epoch:", epoch, "\nCost:", avg_cost)
+    print("Training complete...")
+            
+        
     
