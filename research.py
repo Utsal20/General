@@ -32,7 +32,7 @@ biases = {
 
 # Tentative model
 # 2 hidden layers and 1 output layer
-l1 = tf.nn.relu(tf.add(tf.matmul(x, weights['h1']), biases['b1']))
+l1 = tf.nn.relu(tf.add(tf.matmul(X, weights['h1']), biases['b1']))
 l2 = tf.nn.relu(tf.add(tf.matmul(l1, weights['h2']), biases['b2']))
 out_layer = tf.add(tf.matmul(l2, weights['out']), biases['out'])
 
@@ -46,9 +46,22 @@ train_op = optimizer.minimize(loss_op)
 # Initializing the variables
 init = tf.global_variables_initializer()
 
+# Test function
+def test():
+    global features
+    global labels
+    # Using the features and labels with indices 10-50 for test
+    test_input = features[10:50]
+    true_output = labels[10:50]
+    out1 = sess.run(out_layer, feed_dict={X:test_input})
+    accuracy = sum(abs(true_output - out1))/sum(true_output)
+    return accuracy
+    
+    
+
 with tf.Session() as sess:
     sess.run(init)
-    #Training
+    # Training
     for epoch in range(epochs):
         avg_cost = 0.
         for i in range(n_sequences):
@@ -59,6 +72,5 @@ with tf.Session() as sess:
             avg_cost += c/n_sequences
         print("Epoch:", epoch, "\nCost:", avg_cost)
     print("Training complete...")
-            
-        
+    print("Accuracy: ", test())
     
