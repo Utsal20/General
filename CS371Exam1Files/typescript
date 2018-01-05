@@ -1,0 +1,78 @@
+Script started on Fri 05 Jan 2018 01:56:38 PM PST
+]0;ushrestha20@LAB-SCI-214-10L:~/exam1]7;file://LAB-SCI-214-10L/home/WHITWORTH.EDU/ushrestha20/exam1]0;ushrestha20@LAB-SCI-214-10L: ~/exam1[01;32mushrestha20@LAB-SCI-214-10L[00m:[01;34m~/exam1[00m$ exit./Job.sh
+C++ program:
+2 plus 2 is 4 minus 1 that's 3
+Quick math!
+
+**********************************************
+
+Script1:
+Active processes
+-------------------------------------------
+  PID TTY          TIME CMD
+21192 pts/2    00:00:00 bash
+21210 pts/2    00:00:00 bash
+21218 pts/2    00:00:00 bash
+21219 pts/2    00:00:00 ps
+Everything in the current working directory
+-------------------------------------------
+.  ..  a.out  file1  file2  Job.sh  script1.sh	script2.sh  script3.sh	simple.cpp  typescript
+Combined result
+-------------------------------------------
+File 1 contents:
+asdf
+as'd
+asd
+ad
+asdasjgdkaskdaskdhaksjda
+File 2 contents:
+skdfjlksjdfkljsdfls
+fsd1564156465456
+utyujty6
+ujtyjty
+Path to current working directory
+-------------------------------------------
+/home/WHITWORTH.EDU/ushrestha20/exam1
+
+**********************************************
+
+Script2:
+Enter a child's age:
+7
+Appropriate toy:
+Model trains
+-------------------------------------------
+Enter your birthday month number (1-12):
+7
+Corresponding month:
+July
+
+**********************************************
+
+Script3:
+Enter number of classes:
+4
+Enter credits for subject 1:
+3
+Enter credits for subject 2:
+4
+Enter credits for subject 3:
+3
+Enter credits for subject 4:
+1
+
+Enter name of most demanding class:
+Badminton
+Enter name of easiest class:
+Cac   Calculus
+
+-------------------------------------------
+Easiest class: Calculus
+Most demanding class: Badminton
+Total anticipated credits: 11
+
+**********************************************
+]0;ushrestha20@LAB-SCI-214-10L:~/exam1]7;file://LAB-SCI-214-10L/home/WHITWORTH.EDU/ushrestha20/exam1]0;ushrestha20@LAB-SCI-214-10L: ~/exam1[01;32mushrestha20@LAB-SCI-214-10L[00m:[01;34m~/exam1[00m$ ei[Kxit
+logout
+
+Script done on Fri 05 Jan 2018 01:57:56 PM PST
