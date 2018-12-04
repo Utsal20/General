@@ -1,19 +1,17 @@
 # Divide and conquer solution
+import sys
 
 def distance(a, b):
     return ((a[0]-b[0])**2 + (a[1]-b[1])**2)**(1/2)
 
-def min(a, b):
-    if (a > b):
-        a = b
-    return a
-
 def closest(x):
-    x = sorted(x)
     n = len(x)
+    if n < 2:
+        return sys.maxsize
     if (n == 2):
         return distance(x[0], x[1])
-
+    
+    x = sorted(x)
     x1 = closest(x[:int(n/2)])
     x2 = closest(x[(int(n/2)+1):])
     d = min(x1, x2)
@@ -33,3 +31,7 @@ def closest(x):
 
 test1 = [(2, 3), (12, 30), (40, 50), (5, 1), (12, 10), (3, 4)]
 print(closest(test1))
+test2 = [(1,1), (1,1), (1,1), (1,1)]
+print(closest(test2))
+test3 = [(1,150), (1,100), (50,100), (50,150)]
+print(closest(test3))
