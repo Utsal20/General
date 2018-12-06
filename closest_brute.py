@@ -15,8 +15,5 @@ def closest(x):
                 mind = d
                 a = i
                 b = j
-    print('Points:', x[a], x[b])
-    print('Distance:', mind)
-
-test1 = [(2, 3), (12, 30), (40, 50), (5, 1), (12, 10), (3, 4)]
-closest(test1)
+    # print('Points:', x[a], x[b])
+    # print('Distance:', mind)

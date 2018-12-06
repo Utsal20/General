@@ -1,5 +1,8 @@
 # Divide and conquer solution
 import sys
+from random import randint
+from time import time
+import closest_brute
 
 def distance(a, b):
     return ((a[0]-b[0])**2 + (a[1]-b[1])**2)**(1/2)
@@ -29,9 +32,34 @@ def closest(x):
     
     return d
 
+def gen_data(n):
+    l = []
+    for i in range(n):
+        l.append((randint(0, sys.maxsize), randint(0, sys.maxsize)))
+    return l
+
+def run_tests():
+    d = [100, 1000, 10000, 100000]
+    for each in d:
+        data = gen_data(each)
+        t1 = time()
+        closest(data)
+        t2 = time()
+        closest_brute.closest(data)
+        t3 = time()
+        print(each, t2-t1)
+        print(each, t3-t2)
+
+'''
 test1 = [(2, 3), (12, 30), (40, 50), (5, 1), (12, 10), (3, 4)]
 print(closest(test1))
 test2 = [(1,1), (1,1), (1,1), (1,1)]
 print(closest(test2))
 test3 = [(1,150), (1,100), (50,100), (50,150)]
 print(closest(test3))
+
+test3 = [(1,150), (1,100), (50,100), (50,150)]
+print(closest_brute.closest(test3))
+'''
+
+run_tests()
