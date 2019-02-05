@@ -8,9 +8,9 @@ h1:hover{
 }
 
 table{
-  width: 500px;
+  width: 400px;
   height: 300px;
-  table-layout: auto;
+  table-layout: fixed;
 }
 
 tr:hover{
