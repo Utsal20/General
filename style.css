@@ -1,6 +1,33 @@
-#popup{
+#note{
   width:300px;
-  height:200px;
-  text-align:center;
-  line-height:200px;
+  height: 300px;
+  border:2px solid rgb(60, 141, 40);
+  border-radius:4px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#note:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+#save {
+  padding:5px 5px;
+  outline: none;
+  background-color: #27ae60;
+  border: none;
+  border-radius:5px;
+  color: aliceblue;
+  display: block;
+  margin: 0 auto;
+}
+
+#save:hover {
+  color: rgb(18, 20, 17);
+  background-color: #2ac46a;
 }
