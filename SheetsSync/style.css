@@ -4,7 +4,11 @@ h1{
 }
 
 h1:hover{
-  color: red;
+  color: #e83e3e;
+}
+
+h3{
+  color: #25c481;
 }
 
 table{
@@ -46,6 +50,28 @@ td:nth-child(1){
 
 section{
   margin: 50px;
+}
+
+#search{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+#output{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+#urlhere{
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 0 0 100px #000000aa;
+}
+
+#getsheet{
+  padding: 3px;
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  border-radius: 5px;
 }
 
 /* for custom scrollbar for webkit browser*/
