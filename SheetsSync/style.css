@@ -11,6 +11,10 @@ h3{
   color: #25c481;
 }
 
+h3:hover{
+  color: #e83e3e;
+}
+
 table{
   width: 400px;
   height: 300px;
@@ -65,13 +69,17 @@ section{
 #urlhere{
   width: 70%;
   border-radius: 5px;
-  box-shadow: 0 0 100px #000000aa;
+  box-shadow: 0 0 5px #1ea36c;
 }
 
 #getsheet{
   padding: 3px;
   background: linear-gradient(to right, #25c481, #25b7c4);
   border-radius: 5px;
+}
+
+#getsheet:hover{
+  background: linear-gradient(to right, #38e49c, #68bfc7);
 }
 
 /* for custom scrollbar for webkit browser*/
